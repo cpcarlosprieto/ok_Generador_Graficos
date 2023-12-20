@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #63eef3, #08f097);
+  font-family: "Arial", sans-serif;
+}
+
+header h1 {
+  color: #333;
+  background: linear-gradient(to right, #63eef3, #08f097);
+  padding-left: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.left,
+.right {
+  flex: 0 0 48%;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Mejorando estilos del contenedor izquierdo */
+.left {
+  background: linear-gradient(to right, #63eef3, #08f097);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejorando estilos de los inputs y select */
+select,
+input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 50%;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #555;
+}
+
+#titulo {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dato .serie {
+  width: 30%;
+  margin-bottom: 15px;
+}
+
+.dato .valor {
+  width: 12%;
+}
+
+.button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.agregar {
+  margin-top: 15px;
+}
+
+.crear-grafico {
+  float: unset;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    box-sizing: border-box; /* Añadido para incluir el relleno y el borde en el cálculo del ancho */
+  }
+}
